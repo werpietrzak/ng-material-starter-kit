@@ -6,16 +6,22 @@ import { ProductListComponentModule } from './components/product-list/product-li
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
 import { CategoriesServiceModule } from './services/categories.service-module';
+import { CryptoChipsComponent } from "./components/crypto-chips/crypto-chips.component";
+import { CryptoChipsComponentModule } from "./components/crypto-chips/crypto-chips.component-module";
+import { CryptoServiceModule } from "./services/crypto.service-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
     { path: 'products', component: ProductListComponent },
-    { path: 'categories', component: CategoryListComponent }
+    { path: 'categories', component: CategoryListComponent },
+    { path: 'crypto', component: CryptoChipsComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
     CategoryListComponentModule,
-    CategoriesServiceModule
+    CategoriesServiceModule,
+    CryptoChipsComponentModule,
+    CryptoServiceModule,
   ],
   exports: [RouterModule]
 })
