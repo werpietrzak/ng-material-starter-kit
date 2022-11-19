@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { ProductModel } from "../models/product.model";
+import { NewProductModel, ProductModel } from "../models/product.model";
 
 @Injectable()
 export class ProductsService {
@@ -9,5 +9,9 @@ export class ProductsService {
 
   getAllProducts(): Observable<ProductModel[]> {
     return this._httpClient.get<ProductModel[]>('https://fakestoreapi.com/products');
+  }
+
+  addNewProduct(payload: NewProductModel): Observable<NewProductModel> {
+    return this._httpClient.post<NewProductModel>('https://fakestoreapi.com/products', payload);
   }
 }

@@ -6,3 +6,11 @@ export interface ProductModel {
   description: string;
   image: string;
 }
+
+export interface NewProductModel {
+  title: string;
+  price: number;
+  description: string;
+  image: string;
+  category: string;
+}
