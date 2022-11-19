@@ -14,6 +14,8 @@ import { HolidaysSelectComponentModule } from "./components/holidays-select/holi
 import { HolidaysServiceModule } from "./services/holidays.service-module";
 import { CheckboxCategoriesComponent } from "./components/checkbox-categories/checkbox-categories.component";
 import { CheckboxCategoriesComponentModule } from "./components/checkbox-categories/checkbox-categories.component-module";
+import { CategoriesMenuComponent } from "./components/categories-menu/categories-menu.component";
+import { CategoriesMenuComponentModule } from "./components/categories-menu/categories-menu.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -22,6 +24,7 @@ import { CheckboxCategoriesComponentModule } from "./components/checkbox-categor
     { path: 'crypto', component: CryptoChipsComponent },
     { path: 'public-holidays', component: HolidaysSelectComponent },
     { path: 'checkbox-categories', component: CheckboxCategoriesComponent },
+    { path: 'categories-menu', component: CategoriesMenuComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -32,6 +35,7 @@ import { CheckboxCategoriesComponentModule } from "./components/checkbox-categor
     HolidaysSelectComponentModule,
     HolidaysServiceModule,
     CheckboxCategoriesComponentModule,
+    CategoriesMenuComponentModule,
   ],
   exports: [RouterModule]
 })
