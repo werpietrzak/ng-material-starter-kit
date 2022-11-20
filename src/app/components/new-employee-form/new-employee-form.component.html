@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>Create a new employee</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="newEmployeeForm" (ngSubmit)="onSubmit(newEmployeeForm)">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" placeholder="Name" formControlName="name" required>
+          <mat-error *ngIf="newEmployeeForm.get('name')!.invalid">name is invalid</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Age</mat-label>
+          <input matInput type="text" placeholder="Age" formControlName="age" required>
+          <mat-error *ngIf="newEmployeeForm.get('age')!.invalid">age is invalid</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Salary</mat-label>
+          <input matInput type="text" placeholder="Salary" formControlName="salary" required>
+          <mat-error *ngIf="newEmployeeForm.get('salary')!.invalid">salary is invalid</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <button type="submit" mat-raised-button color="primary" [disabled]="newEmployeeForm.invalid">Submit</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -18,6 +18,9 @@ import { CategoriesMenuComponent } from "./components/categories-menu/categories
 import { CategoriesMenuComponentModule } from "./components/categories-menu/categories-menu.component-module";
 import { NewProductFormComponent } from "./components/new-product-form/new-product-form.component";
 import { NewProductFormComponentModule } from "./components/new-product-form/new-product-form.component-module";
+import { NewEmployeeFormComponent } from "./components/new-employee-form/new-employee-form.component";
+import { NewEmployeeFormComponentModule } from "./components/new-employee-form/new-employee-form.component-module";
+import { EmployeeServiceModule } from "./services/employee.service-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -28,6 +31,7 @@ import { NewProductFormComponentModule } from "./components/new-product-form/new
     { path: 'checkbox-categories', component: CheckboxCategoriesComponent },
     { path: 'categories-menu', component: CategoriesMenuComponent },
     { path: 'create-product', component: NewProductFormComponent },
+    { path: 'create-employee', component: NewEmployeeFormComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -40,6 +44,8 @@ import { NewProductFormComponentModule } from "./components/new-product-form/new
     CheckboxCategoriesComponentModule,
     CategoriesMenuComponentModule,
     NewProductFormComponentModule,
+    NewEmployeeFormComponentModule,
+    EmployeeServiceModule,
   ],
   exports: [RouterModule]
 })
