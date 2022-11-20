@@ -21,6 +21,9 @@ import { NewProductFormComponentModule } from "./components/new-product-form/new
 import { NewEmployeeFormComponent } from "./components/new-employee-form/new-employee-form.component";
 import { NewEmployeeFormComponentModule } from "./components/new-employee-form/new-employee-form.component-module";
 import { EmployeeServiceModule } from "./services/employee.service-module";
+import { LoginFormComponent } from "./components/login-form/login-form.component";
+import { LoginFormComponentModule } from "./components/login-form/login-form.component-module";
+import { UserServiceModule } from "./services/user.service-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -32,6 +35,7 @@ import { EmployeeServiceModule } from "./services/employee.service-module";
     { path: 'categories-menu', component: CategoriesMenuComponent },
     { path: 'create-product', component: NewProductFormComponent },
     { path: 'create-employee', component: NewEmployeeFormComponent },
+    { path: 'login', component: LoginFormComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -46,6 +50,8 @@ import { EmployeeServiceModule } from "./services/employee.service-module";
     NewProductFormComponentModule,
     NewEmployeeFormComponentModule,
     EmployeeServiceModule,
+    LoginFormComponentModule,
+    UserServiceModule,
   ],
   exports: [RouterModule]
 })
