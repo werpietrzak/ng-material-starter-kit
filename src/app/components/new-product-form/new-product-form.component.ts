@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductsService } from '../../services/products.service';
+import { CategoriesService } from "../../services/categories.service";
 
 @Component({
   selector: 'app-new-product-form',
@@ -10,7 +11,12 @@ import { ProductsService } from '../../services/products.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NewProductFormComponent {
-  constructor(private _productsService: ProductsService) { }
+  constructor(
+    private _productsService: ProductsService,
+    private _categoriesService: CategoriesService,
+  ) { }
+
+  categories = this._categoriesService.getAllCategories();
 
   newProductForm = new FormGroup({
     title: new FormControl(null, [Validators.required]),
