@@ -24,6 +24,8 @@ import { EmployeeServiceModule } from "./services/employee.service-module";
 import { LoginFormComponent } from "./components/login-form/login-form.component";
 import { LoginFormComponentModule } from "./components/login-form/login-form.component-module";
 import { UserServiceModule } from "./services/user.service-module";
+import { RegisterUserComponent } from "./components/register-user/register-user.component";
+import { RegisterUserComponentModule } from "./components/register-user/register-user.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -36,6 +38,7 @@ import { UserServiceModule } from "./services/user.service-module";
     { path: 'create-product', component: NewProductFormComponent },
     { path: 'create-employee', component: NewEmployeeFormComponent },
     { path: 'login', component: LoginFormComponent },
+    { path: 'register', component: RegisterUserComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -52,6 +55,7 @@ import { UserServiceModule } from "./services/user.service-module";
     EmployeeServiceModule,
     LoginFormComponentModule,
     UserServiceModule,
+    RegisterUserComponentModule,
   ],
   exports: [RouterModule]
 })
