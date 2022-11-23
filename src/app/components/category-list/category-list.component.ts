@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { CategoriesService } from "../../services/categories.service";
+import { CategoriesService } from "../../services/categories/categories.service";
 
 @Component({
   selector: 'app-category-list',

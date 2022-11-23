@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { CryptoModel } from "../models/crypto.model";
+import { CryptoModel } from "../../models/crypto.model";
 
 @Injectable()
 export class CryptoService {

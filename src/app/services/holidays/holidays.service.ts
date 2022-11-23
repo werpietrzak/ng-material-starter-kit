@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { HolidayModel } from "../models/holiday.model";
+import { HolidayModel } from "../../models/holiday.model";
 
 @Injectable()
 export class HolidaysService {

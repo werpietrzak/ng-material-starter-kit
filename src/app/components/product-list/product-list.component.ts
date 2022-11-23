@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { ProductsService } from "../../services/products.service";
+import { ProductsService } from "../../services/products/products.service";
 
 @Component({
   selector: 'product-list',

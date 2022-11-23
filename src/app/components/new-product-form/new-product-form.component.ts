@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ProductsService } from '../../services/products.service';
-import { CategoriesService } from "../../services/categories.service";
+import { ProductsService } from '../../services/products/products.service';
+import { CategoriesService } from "../../services/categories/categories.service";
 
 @Component({
   selector: 'app-new-product-form',

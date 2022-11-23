@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { CatFactsService } from "../../services/cat-facts.service";
+import { CatFactsService } from "../../services/cat-facts/cat-facts.service";
 
 @Component({
   selector: 'app-cat-facts',

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { HolidaysService } from "../../services/holidays.service";
+import { HolidaysService } from "../../services/holidays/holidays.service";
 
 @Component({
   selector: 'app-holidays-select',

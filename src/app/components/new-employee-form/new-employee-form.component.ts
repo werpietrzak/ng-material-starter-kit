@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { EmployeeService } from '../../services/employee.service';
+import { EmployeeService } from '../../services/employee/employee.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
