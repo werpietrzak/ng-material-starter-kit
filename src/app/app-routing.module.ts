@@ -26,6 +26,9 @@ import { LoginFormComponentModule } from "./components/login-form/login-form.com
 import { UserServiceModule } from "./services/user.service-module";
 import { RegisterUserComponent } from "./components/register-user/register-user.component";
 import { RegisterUserComponentModule } from "./components/register-user/register-user.component-module";
+import { CatFactsComponent } from "./components/cat-facts/cat-facts.component";
+import { CatFactsComponentModule } from "./components/cat-facts/cat-facts.component-module";
+import { CatFactsServiceModule } from "./services/cat-facts.service-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -39,6 +42,7 @@ import { RegisterUserComponentModule } from "./components/register-user/register
     { path: 'create-employee', component: NewEmployeeFormComponent },
     { path: 'login', component: LoginFormComponent },
     { path: 'register', component: RegisterUserComponent },
+    { path: 'cat-facts', component: CatFactsComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -56,6 +60,8 @@ import { RegisterUserComponentModule } from "./components/register-user/register
     LoginFormComponentModule,
     UserServiceModule,
     RegisterUserComponentModule,
+    CatFactsComponentModule,
+    CatFactsServiceModule,
   ],
   exports: [RouterModule]
 })
