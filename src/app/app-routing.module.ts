@@ -38,6 +38,8 @@ import { ProductDetailsComponent } from "./components/product-details/product-de
 import { ProductDetailsComponentModule } from "./components/product-details/product-details.component-module";
 import { CartComponent } from "./components/cart/cart.component";
 import { CartComponentModule } from "./components/cart/cart.component-module";
+import { UserDetailsComponent } from "./components/user-details/user-details.component";
+import { UserDetailsComponentModule } from "./components/user-details/user-details.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -56,6 +58,7 @@ import { CartComponentModule } from "./components/cart/cart.component-module";
     { path: 'product-search', component: ProductTableComponent },
     { path: 'product/:id', component: ProductDetailsComponent },
     { path: 'cart/:id', component: CartComponent },
+    { path: 'user/:id', component: UserDetailsComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -80,6 +83,7 @@ import { CartComponentModule } from "./components/cart/cart.component-module";
     ProductTableComponentModule,
     ProductDetailsComponentModule,
     CartComponentModule,
+    UserDetailsComponentModule,
   ],
   exports: [RouterModule]
 })
