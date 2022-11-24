@@ -14,3 +14,15 @@ export interface NewProductModel {
   image: string;
   category: string;
 }
+
+interface CartProductModel {
+  productId: number;
+  quantity: number;
+}
+
+export interface CartModel {
+  id: number;
+  userId: number;
+  date: Date;
+  products: CartProductModel[];
+}
