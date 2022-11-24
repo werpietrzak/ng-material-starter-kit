@@ -40,6 +40,9 @@ import { CartComponent } from "./components/cart/cart.component";
 import { CartComponentModule } from "./components/cart/cart.component-module";
 import { UserDetailsComponent } from "./components/user-details/user-details.component";
 import { UserDetailsComponentModule } from "./components/user-details/user-details.component-module";
+import { ActivityComponent } from "./components/activity/activity.component";
+import { ActivityComponentModule } from "./components/activity/activity.component-module";
+import { ActivityServiceModule } from "./services/activity/activity.service-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -59,6 +62,7 @@ import { UserDetailsComponentModule } from "./components/user-details/user-detai
     { path: 'product/:id', component: ProductDetailsComponent },
     { path: 'cart/:id', component: CartComponent },
     { path: 'user/:id', component: UserDetailsComponent },
+    { path: 'activity', component: ActivityComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -84,6 +88,8 @@ import { UserDetailsComponentModule } from "./components/user-details/user-detai
     ProductDetailsComponentModule,
     CartComponentModule,
     UserDetailsComponentModule,
+    ActivityComponentModule,
+    ActivityServiceModule,
   ],
   exports: [RouterModule]
 })

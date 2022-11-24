@@ -96,6 +96,10 @@
     "text": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "{{ $itemVariable$ }}"
+    },
+    "activity": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\"><h2>$content$</h2></ng-container>",
+      "content": "{{ $itemVariable$ }}"
     }
   }
 }
