@@ -34,6 +34,8 @@ import { AgePredictionServiceModule } from "./services/age-prediction/age-predic
 import { AgePredictionComponentModule } from "./components/age-prediction/age-prediction.component-module";
 import { ProductTableComponent } from "./components/product-table/product-table.component";
 import { ProductTableComponentModule } from "./components/product-table/product-table.component-module";
+import { ProductDetailsComponent } from "./components/product-details/product-details.component";
+import { ProductDetailsComponentModule } from "./components/product-details/product-details.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -50,6 +52,7 @@ import { ProductTableComponentModule } from "./components/product-table/product-
     { path: 'cat-facts', component: CatFactsComponent },
     { path: 'age/:name', component: AgePredictionComponent },
     { path: 'product-search', component: ProductTableComponent },
+    { path: 'product/:id', component: ProductDetailsComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -72,6 +75,7 @@ import { ProductTableComponentModule } from "./components/product-table/product-
     AgePredictionServiceModule,
     AgePredictionComponentModule,
     ProductTableComponentModule,
+    ProductDetailsComponentModule,
   ],
   exports: [RouterModule]
 })

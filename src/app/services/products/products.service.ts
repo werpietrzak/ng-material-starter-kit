@@ -11,6 +11,10 @@ export class ProductsService {
     return this._httpClient.get<ProductModel[]>('https://fakestoreapi.com/products');
   }
 
+  getOneProduct(id: string): Observable<ProductModel> {
+    return this._httpClient.get<ProductModel>(`https://fakestoreapi.com/products/${id}`);
+  }
+
   addNewProduct(payload: NewProductModel): Observable<NewProductModel> {
     return this._httpClient.post<NewProductModel>('https://fakestoreapi.com/products', payload);
   }
