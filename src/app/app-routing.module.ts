@@ -43,26 +43,29 @@ import { UserDetailsComponentModule } from "./components/user-details/user-detai
 import { ActivityComponent } from "./components/activity/activity.component";
 import { ActivityComponentModule } from "./components/activity/activity.component-module";
 import { ActivityServiceModule } from "./services/activity/activity.service-module";
+import { FilteredListComponent } from "./components/filtered-list/filtered-list.component";
+import { FilteredListComponentModule } from "./components/filtered-list/filtered-list.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
-    { path: 'products', component: ProductListComponent },
-    { path: 'categories', component: CategoryListComponent },
-    { path: 'crypto', component: CryptoChipsComponent },
-    { path: 'public-holidays', component: HolidaysSelectComponent },
-    { path: 'checkbox-categories', component: CheckboxCategoriesComponent },
-    { path: 'categories-menu', component: CategoriesMenuComponent },
-    { path: 'create-product', component: NewProductFormComponent },
-    { path: 'create-employee', component: NewEmployeeFormComponent },
-    { path: 'login', component: LoginFormComponent },
-    { path: 'register', component: RegisterUserComponent },
-    { path: 'cat-facts', component: CatFactsComponent },
-    { path: 'age/:name', component: AgePredictionComponent },
-    { path: 'product-search', component: ProductTableComponent },
-    { path: 'product/:id', component: ProductDetailsComponent },
-    { path: 'cart/:id', component: CartComponent },
-    { path: 'user/:id', component: UserDetailsComponent },
     { path: 'activity', component: ActivityComponent },
+    { path: 'age/:name', component: AgePredictionComponent },
+    { path: 'cart/:id', component: CartComponent },
+    { path: 'cat-facts', component: CatFactsComponent },
+    { path: 'categories', component: CategoryListComponent },
+    { path: 'categories-menu', component: CategoriesMenuComponent },
+    { path: 'checkbox-categories', component: CheckboxCategoriesComponent },
+    { path: 'create-employee', component: NewEmployeeFormComponent },
+    { path: 'create-product', component: NewProductFormComponent },
+    { path: 'crypto', component: CryptoChipsComponent },
+    { path: 'login', component: LoginFormComponent },
+    { path: 'product/:id', component: ProductDetailsComponent },
+    { path: 'product-search', component: ProductTableComponent },
+    { path: 'products', component: ProductListComponent },
+    { path: 'products/:category', component: FilteredListComponent },
+    { path: 'public-holidays', component: HolidaysSelectComponent },
+    { path: 'register', component: RegisterUserComponent },
+    { path: 'user/:id', component: UserDetailsComponent },
   ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -90,6 +93,7 @@ import { ActivityServiceModule } from "./services/activity/activity.service-modu
     UserDetailsComponentModule,
     ActivityComponentModule,
     ActivityServiceModule,
+    FilteredListComponentModule,
   ],
   exports: [RouterModule]
 })
