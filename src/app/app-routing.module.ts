@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProductListComponent } from './components/product-list/product-list.component';
+// import { ProductListComponent } from './components/product-list/product-list.component';
 import { CategoryListComponent } from './components/category-list/category-list.component';
-import { ProductListComponentModule } from './components/product-list/product-list.component-module';
+// import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products/products.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
 import { CategoriesServiceModule } from './services/categories/categories.service-module';
@@ -45,6 +45,10 @@ import { ActivityComponentModule } from "./components/activity/activity.componen
 import { ActivityServiceModule } from "./services/activity/activity.service-module";
 import { FilteredListComponent } from "./components/filtered-list/filtered-list.component";
 import { FilteredListComponentModule } from "./components/filtered-list/filtered-list.component-module";
+import {FilteredBySubjectListComponent} from "./components/filtered-by-subject-list/filtered-by-subject-list.component";
+import {
+  FilteredBySubjectListComponentModule
+} from "./components/filtered-by-subject-list/filtered-by-subject-list.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -61,13 +65,14 @@ import { FilteredListComponentModule } from "./components/filtered-list/filtered
     { path: 'login', component: LoginFormComponent },
     { path: 'product/:id', component: ProductDetailsComponent },
     { path: 'product-search', component: ProductTableComponent },
-    { path: 'products', component: ProductListComponent },
+    // { path: 'products', component: ProductListComponent },
+    { path: 'products', component: FilteredBySubjectListComponent },
     { path: 'products/:category', component: FilteredListComponent },
     { path: 'public-holidays', component: HolidaysSelectComponent },
     { path: 'register', component: RegisterUserComponent },
     { path: 'user/:id', component: UserDetailsComponent },
   ]),
-    ProductListComponentModule,
+    // ProductListComponentModule,
     ProductsServiceModule,
     CategoryListComponentModule,
     CategoriesServiceModule,
@@ -94,6 +99,7 @@ import { FilteredListComponentModule } from "./components/filtered-list/filtered
     ActivityComponentModule,
     ActivityServiceModule,
     FilteredListComponentModule,
+    FilteredBySubjectListComponentModule,
   ],
   exports: [RouterModule]
 })
