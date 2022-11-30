@@ -45,10 +45,12 @@ import { ActivityComponentModule } from "./components/activity/activity.componen
 import { ActivityServiceModule } from "./services/activity/activity.service-module";
 import { FilteredListComponent } from "./components/filtered-list/filtered-list.component";
 import { FilteredListComponentModule } from "./components/filtered-list/filtered-list.component-module";
-import {FilteredBySubjectListComponent} from "./components/filtered-by-subject-list/filtered-by-subject-list.component";
+import { FilteredBySubjectListComponent } from "./components/filtered-by-subject-list/filtered-by-subject-list.component";
 import {
   FilteredBySubjectListComponentModule
 } from "./components/filtered-by-subject-list/filtered-by-subject-list.component-module";
+import { SortedProductListComponent } from "./components/sorted-product-list/sorted-product-list.component";
+import { SortedProductListComponentModule } from "./components/sorted-product-list/sorted-product-list.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -70,6 +72,7 @@ import {
     { path: 'products/:category', component: FilteredListComponent },
     { path: 'public-holidays', component: HolidaysSelectComponent },
     { path: 'register', component: RegisterUserComponent },
+    { path: 'sorted-products', component: SortedProductListComponent },
     { path: 'user/:id', component: UserDetailsComponent },
   ]),
     // ProductListComponentModule,
@@ -100,6 +103,7 @@ import {
     ActivityServiceModule,
     FilteredListComponentModule,
     FilteredBySubjectListComponentModule,
+    SortedProductListComponentModule,
   ],
   exports: [RouterModule]
 })
