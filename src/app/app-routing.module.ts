@@ -51,10 +51,15 @@ import {
 } from "./components/filtered-by-subject-list/filtered-by-subject-list.component-module";
 import { SortedProductListComponent } from "./components/sorted-product-list/sorted-product-list.component";
 import { SortedProductListComponentModule } from "./components/sorted-product-list/sorted-product-list.component-module";
+import { AdvancedEmployeeListComponent } from "./components/advanced-employee-list/advanced-employee-list.component";
+import {
+  AdvancedEmployeeListComponentModule
+} from "./components/advanced-employee-list/advanced-employee-list.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
     { path: 'activity', component: ActivityComponent },
+    { path: 'advanced-employee-list', component: AdvancedEmployeeListComponent },
     { path: 'age/:name', component: AgePredictionComponent },
     { path: 'cart/:id', component: CartComponent },
     { path: 'cat-facts', component: CatFactsComponent },
@@ -104,6 +109,7 @@ import { SortedProductListComponentModule } from "./components/sorted-product-li
     FilteredListComponentModule,
     FilteredBySubjectListComponentModule,
     SortedProductListComponentModule,
+    AdvancedEmployeeListComponentModule,
   ],
   exports: [RouterModule]
 })
