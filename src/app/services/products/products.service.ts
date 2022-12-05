@@ -22,4 +22,8 @@ export class ProductsService {
   getCartInfo(id: string): Observable<CartModel> {
     return this._httpClient.get<CartModel>(`https://fakestoreapi.com/carts/${id}`);
   }
+
+  deleteProduct(id: number): Observable<ProductModel> {
+    return this._httpClient.delete<ProductModel>(`https://fakestoreapi.com/products/${id}`);
+  }
 }

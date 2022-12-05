@@ -58,6 +58,12 @@ import {
 import { BeerListComponent } from "./components/beer-list/beer-list.component";
 import { BeerListComponentModule } from "./components/beer-list/beer-list.component-module";
 import { BeerServiceModule } from "./services/beer.service-module";
+import {
+  ProductListDeleteButtonComponent
+} from "./components/product-list-delete-button/product-list-delete-button.component";
+import {
+  ProductListDeleteButtonComponentModule
+} from "./components/product-list-delete-button/product-list-delete-button.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -80,6 +86,7 @@ import { BeerServiceModule } from "./services/beer.service-module";
     { path: 'products', component: FilteredBySubjectListComponent },
     { path: 'products/:category', component: FilteredListComponent },
     { path: 'public-holidays', component: HolidaysSelectComponent },
+    { path: 'refresh-products', component: ProductListDeleteButtonComponent },
     { path: 'register', component: RegisterUserComponent },
     { path: 'sorted-products', component: SortedProductListComponent },
     { path: 'user/:id', component: UserDetailsComponent },
@@ -116,6 +123,7 @@ import { BeerServiceModule } from "./services/beer.service-module";
     AdvancedEmployeeListComponentModule,
     BeerListComponentModule,
     BeerServiceModule,
+    ProductListDeleteButtonComponentModule,
   ],
   exports: [RouterModule]
 })
