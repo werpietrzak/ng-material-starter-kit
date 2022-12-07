@@ -12,6 +12,10 @@ export class EmployeeService {
     return this._httpClient.post<NewEmployeeModel>('https://dummy.restapiexample.com/api/v1/create', payload);
   }
 
+  deleteEmployee(id: number): Observable<EmployeeModel> {
+    return this._httpClient.delete<EmployeeModel>(`https://dummy.restapiexample.com/api/v1/delete/${id}`);
+  }
+
   getAllEmployees(): Observable<EmployeeModel[]> {
     return this._httpClient.get<ApiResponse<EmployeeModelFromAPI[]>>('https://dummy.restapiexample.com/api/v1/employees')
       .pipe(map(employees => {
