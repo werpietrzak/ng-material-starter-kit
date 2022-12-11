@@ -1,10 +1,22 @@
 <mat-card>
   <mat-card-title>Select a category:</mat-card-title>
   <mat-card-content>
-    <mat-selection-list role="list">
-      <mat-list-option role="listitem" *ngFor="let item of data | async">
-        {{ item }}
-      </mat-list-option>
+    <mat-selection-list role="list" *ngIf="data | async as options; else loading">
+      <ng-container *ngIf="options.length; else emptyState">
+        <mat-list-option role="listitem" *ngFor="let item of data | async">
+          {{ item }}
+        </mat-list-option>
+      </ng-container>
+      <ng-template #emptyState>
+        No data for this page.
+      </ng-template>
     </mat-selection-list>
+    <ng-template #loading>
+      <mat-progress-spinner
+        [color]="'primary'"
+        [mode]="'indeterminate'"
+        [value]="50">
+      </mat-progress-spinner>
+    </ng-template>
   </mat-card-content>
 </mat-card>
