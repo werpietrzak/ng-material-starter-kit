@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { CategoriesService } from "../../services/categories/categories.service";
-import {map} from "rxjs";
 
 @Component({
   selector: 'app-category-list',
@@ -12,5 +11,5 @@ import {map} from "rxjs";
 export class CategoryListComponent {
   constructor(private _categoriesService: CategoriesService) {}
 
-  data = this._categoriesService.getAllCategories().pipe(map(() => []));
+  data = this._categoriesService.getAllCategories();
 }
