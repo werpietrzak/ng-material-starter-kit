@@ -80,6 +80,10 @@ import {CryptoMasterDetailsComponent} from "./components/crypto-master-details/c
 import {
   CryptoMasterDetailsComponentModule
 } from "./components/crypto-master-details/crypto-master-details.component-module";
+import { ProductsWithLoadingComponent } from "./components/products-with-loading/products-with-loading.component";
+import {
+  ProductsWithLoadingComponentModule
+} from "./components/products-with-loading/products-with-loading.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -100,8 +104,9 @@ import {
     { path: 'login', component: LoginFormComponent },
     { path: 'product/:id', component: ProductDetailsComponent },
     { path: 'product-search', component: ProductTableComponent },
-    { path: 'products2', component: ProductListComponent },
-    { path: 'products', component: FilteredBySubjectListComponent },
+    { path: 'products', component: ProductsWithLoadingComponent },
+    { path: 'products2', component: FilteredBySubjectListComponent },
+    { path: 'products3', component: ProductListComponent },
     { path: 'products/:category', component: FilteredListComponent },
     { path: 'products-master-details', component: ProductMasterDetailsComponent },
     { path: 'public-holidays', component: HolidaysSelectComponent },
@@ -148,6 +153,7 @@ import {
     ProductMasterDetailsComponentModule,
     EmployeesMasterDetailsComponentModule,
     CryptoMasterDetailsComponentModule,
+    ProductsWithLoadingComponentModule,
   ],
   exports: [RouterModule]
 })
