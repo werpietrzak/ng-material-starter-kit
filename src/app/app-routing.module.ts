@@ -66,6 +66,10 @@ import {
 } from "./components/product-list-delete-button/product-list-delete-button.component-module";
 import { EmployeeListComponent } from "./components/employee-list/employee-list.component";
 import { EmployeeListComponentModule } from "./components/employee-list/employee-list.component-module";
+import { ProductMasterDetailsComponent } from "./components/product-master-details/product-master-details.component";
+import {
+  ProductMasterDetailsComponentModule
+} from "./components/product-master-details/product-master-details.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -87,6 +91,7 @@ import { EmployeeListComponentModule } from "./components/employee-list/employee
     { path: 'products2', component: ProductListComponent },
     { path: 'products', component: FilteredBySubjectListComponent },
     { path: 'products/:category', component: FilteredListComponent },
+    { path: 'products-master-details', component: ProductMasterDetailsComponent },
     { path: 'public-holidays', component: HolidaysSelectComponent },
     { path: 'refresh-employees', component: EmployeeListComponent },
     { path: 'refresh-products', component: ProductListDeleteButtonComponent },
@@ -128,6 +133,7 @@ import { EmployeeListComponentModule } from "./components/employee-list/employee
     BeerServiceModule,
     ProductListDeleteButtonComponentModule,
     EmployeeListComponentModule,
+    ProductMasterDetailsComponentModule,
   ],
   exports: [RouterModule]
 })

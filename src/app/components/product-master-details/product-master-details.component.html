@@ -1,0 +1,31 @@
+<mat-grid-list cols="2" rowHeight="1:2">
+  <mat-grid-tile>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of products | async">
+        {{item.title}}
+        <button
+          mat-button
+          (click)="selectProduct(item.id)"
+        >
+          See details
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <ng-container *ngIf="details | async as item">
+      <mat-list role="list">
+        <img [src]="item.image" [alt]="item.title" style="width: 200px" />
+        <mat-list-item role="listitem">
+          {{item.title}}
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          {{item.price}}
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          {{item.description}}
+        </mat-list-item>
+      </mat-list>
+    </ng-container>
+  </mat-grid-tile>
+</mat-grid-list>
