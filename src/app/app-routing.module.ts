@@ -76,6 +76,10 @@ import {
 import {
   EmployeesMasterDetailsComponentModule
 } from "./components/employees-master-details/employees-master-details.component-module";
+import {CryptoMasterDetailsComponent} from "./components/crypto-master-details/crypto-master-details.component";
+import {
+  CryptoMasterDetailsComponentModule
+} from "./components/crypto-master-details/crypto-master-details.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -91,6 +95,7 @@ import {
     { path: 'create-employee', component: NewEmployeeFormComponent },
     { path: 'create-product', component: NewProductFormComponent },
     { path: 'crypto', component: CryptoChipsComponent },
+    { path: 'crypto-master-details', component: CryptoMasterDetailsComponent },
     { path: 'employees-master-details', component: EmployeesMasterDetailsComponent },
     { path: 'login', component: LoginFormComponent },
     { path: 'product/:id', component: ProductDetailsComponent },
@@ -142,6 +147,7 @@ import {
     EmployeeListComponentModule,
     ProductMasterDetailsComponentModule,
     EmployeesMasterDetailsComponentModule,
+    CryptoMasterDetailsComponentModule,
   ],
   exports: [RouterModule]
 })

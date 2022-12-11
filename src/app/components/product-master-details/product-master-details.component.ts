@@ -13,11 +13,11 @@ import { ProductModel } from "../../models/product.model";
 export class ProductMasterDetailsComponent {
   private _selectedProductSubject: Subject<number> = new Subject();
 
-  public selectedProductSubject: Observable<number> = this._selectedProductSubject.asObservable();
+  public selectedProduct: Observable<number> = this._selectedProductSubject.asObservable();
 
   public products: Observable<ProductModel[]> = this._productsService.getAllProducts();
 
-  public details: Observable<ProductModel> = this.selectedProductSubject.pipe(
+  public details: Observable<ProductModel> = this.selectedProduct.pipe(
     switchMap(
     data => this._productsService.getOneProduct(data)
     )
