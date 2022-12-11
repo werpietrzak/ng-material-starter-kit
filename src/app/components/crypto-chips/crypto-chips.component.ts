@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import {CryptoService} from "../../services/crypto/crypto.service";
+import { CryptoService } from "../../services/crypto/crypto.service";
+import { Observable } from "rxjs";
+import { CryptoModel } from "../../models/crypto.model";
 
 @Component({
   selector: 'crypto-chips',
@@ -11,5 +13,5 @@ import {CryptoService} from "../../services/crypto/crypto.service";
 export class CryptoChipsComponent {
   constructor(private _cryptoService: CryptoService) {}
 
-  data = this._cryptoService.getAllCrypto();
+  data: Observable<CryptoModel[]> = this._cryptoService.getAllCrypto();
 }
