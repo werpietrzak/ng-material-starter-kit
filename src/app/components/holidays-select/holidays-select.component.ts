@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { HolidaysService } from "../../services/holidays/holidays.service";
+import {Observable} from "rxjs";
+import {HolidayModel} from "../../models/holiday.model";
 
 @Component({
   selector: 'app-holidays-select',
@@ -11,5 +13,5 @@ import { HolidaysService } from "../../services/holidays/holidays.service";
 export class HolidaysSelectComponent {
   constructor(private _holidaysService: HolidaysService) {}
 
-  holidays = this._holidaysService.getHolidays();
+  holidays: Observable<HolidayModel[]> = this._holidaysService.getHolidays();
 }
