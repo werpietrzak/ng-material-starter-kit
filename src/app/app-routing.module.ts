@@ -84,6 +84,8 @@ import { ProductsWithLoadingComponent } from "./components/products-with-loading
 import {
   ProductsWithLoadingComponentModule
 } from "./components/products-with-loading/products-with-loading.component-module";
+import { ProductSearchComponent } from "./components/product-search/product-search.component";
+import { ProductSearchComponentModule } from "./components/product-search/product-search.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -103,7 +105,8 @@ import {
     { path: 'employees-master-details', component: EmployeesMasterDetailsComponent },
     { path: 'login', component: LoginFormComponent },
     { path: 'product/:id', component: ProductDetailsComponent },
-    { path: 'product-search', component: ProductTableComponent },
+    { path: 'product-search', component: ProductSearchComponent },
+    { path: 'product-search-2', component: ProductTableComponent },
     { path: 'products', component: ProductsWithLoadingComponent },
     { path: 'products2', component: FilteredBySubjectListComponent },
     { path: 'products3', component: ProductListComponent },
@@ -154,6 +157,7 @@ import {
     EmployeesMasterDetailsComponentModule,
     CryptoMasterDetailsComponentModule,
     ProductsWithLoadingComponentModule,
+    ProductSearchComponentModule,
   ],
   exports: [RouterModule]
 })
