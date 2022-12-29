@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-title>
+    University search
+  </mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="search">
+      <div>
+        <mat-form-field appearance="fill">
+          <input matInput type="text" placeholder="Start typing here" formControlName="query" required>
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-title>
+    University list
+  </mat-card-title>
+  <mat-card-content *ngIf="universities | async as universityList">
+    <ng-container *ngIf="universityList.length; else noResults">
+      <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let item of universityList">
+          {{item.name}}
+        </mat-list-item>
+      </mat-list>
+    </ng-container>
+    <ng-template #emptyState>
+      Search a country to see its universities.
+    </ng-template>
+    <ng-template #noResults>
+      No universities found for this country.
+    </ng-template>
+  </mat-card-content>
+</mat-card>

@@ -86,6 +86,9 @@ import {
 } from "./components/products-with-loading/products-with-loading.component-module";
 import { ProductSearchComponent } from "./components/product-search/product-search.component";
 import { ProductSearchComponentModule } from "./components/product-search/product-search.component-module";
+import { UniversitySearchComponent } from "./components/university-search/university-search.component";
+import { UniversityServiceModule } from "./services/university.service-module";
+import { UniversitySearchComponentModule } from "./components/university-search/university-search.component-module";
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -117,6 +120,7 @@ import { ProductSearchComponentModule } from "./components/product-search/produc
     { path: 'refresh-products', component: ProductListDeleteButtonComponent },
     { path: 'register', component: RegisterUserComponent },
     { path: 'sorted-products', component: SortedProductListComponent },
+    { path: 'university-search', component: UniversitySearchComponent },
     { path: 'user/:id', component: UserDetailsComponent },
   ]),
     ProductListComponentModule,
@@ -158,6 +162,8 @@ import { ProductSearchComponentModule } from "./components/product-search/produc
     CryptoMasterDetailsComponentModule,
     ProductsWithLoadingComponentModule,
     ProductSearchComponentModule,
+    UniversityServiceModule,
+    UniversitySearchComponentModule,
   ],
   exports: [RouterModule]
 })
